@@ -40,8 +40,8 @@ export default async function handler(
     } as SMTPTransport.Options);
     // Email options
     const mailOptions = {
-      from: process.env.MAILTRAP_FROM_EMAIL,
-      to: "admission@ac.in",
+      // from: process.env.MAILTRAP_FROM_EMAIL,
+      to: "rahulkolhe90.rk.rk@gmail.com",
       subject: `New Inquiry from ${fullName}`,
       html: emailTemplate(fullName, email, mobile, message),
     };
