@@ -64,7 +64,7 @@ const Page = () => {
     </button>
   </div>
   {isPopupOpen && (
-         <div className="fixed inset-0  flex justify-center items-center z-40 pointer-events-auto m-6">
+         <div className="fixed inset-0  flex justify-center items-center  pointer-events-auto  ml-3 mr-3">
     <div className="relative bg-white p-6 rounded-lg shadow-lg w-full sm:w-96 z-50 pointer-events-auto">
             <button
               onClick={togglePopup}
