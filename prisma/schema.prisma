@@ -1,0 +1,17 @@
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Batch {
+  id           Int      @id @default(autoincrement())
+  batchCode    String
+  duration     String
+  durationType String
+  type         String
+  startDate    DateTime
+}
