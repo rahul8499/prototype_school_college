@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import nodemailer from "nodemailer";
+import SMTPTransport from 'nodemailer/lib/smtp-transport';
 
 type Data = {
   success: boolean;
@@ -16,15 +17,27 @@ export default async function handler(
     const { fullName, lookingFor, email, mobile, message } = req.body;
 
     // Configure the transporter
+    // const transporter = nodemailer.createTransport({
+    //   host: process.env.MAILTRAP_HOST,
+    //   secure: false, // true for 465, false for other ports
+
+    //   port: process.env.MAILTRAP_PORT,
+    //   auth: {
+    //     user: process.env.MAILTRAP_USER,
+    //     pass: process.env.MAILTRAP_PASSWORD,
+    //   },
+    // });
+
+
     const transporter = nodemailer.createTransport({
-      host: process.env.MAILTRAP_HOST,
+      host:process.env.MAILTRAP_HOST,
       port: process.env.MAILTRAP_PORT,
+      secure: false, // true for 465, false for other ports
       auth: {
         user: process.env.MAILTRAP_USER,
         pass: process.env.MAILTRAP_PASSWORD,
       },
-    });
-
+    } as SMTPTransport.Options);
     // Email options
     const mailOptions = {
       from: process.env.MAILTRAP_FROM_EMAIL,
