@@ -16,17 +16,7 @@ export default async function handler(
   if (req.method === "POST") {
     const { fullName, lookingFor, email, mobile, message } = req.body;
 
-    // Configure the transporter
-    // const transporter = nodemailer.createTransport({
-    //   host: process.env.MAILTRAP_HOST,
-    //   secure: false, // true for 465, false for other ports
 
-    //   port: process.env.MAILTRAP_PORT,
-    //   auth: {
-    //     user: process.env.MAILTRAP_USER,
-    //     pass: process.env.MAILTRAP_PASSWORD,
-    //   },
-    // });
 
 
     const transporter = nodemailer.createTransport({

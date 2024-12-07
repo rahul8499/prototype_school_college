@@ -64,7 +64,7 @@ const Page = () => {
     </button>
   </div>
   {isPopupOpen && (
-         <div className="fixed inset-0 bg-gray-500 bg-opacity-50 flex justify-center items-center z-40 pointer-events-auto">
+         <div className="fixed inset-0  flex justify-center items-center z-40 pointer-events-auto m-6">
     <div className="relative bg-white p-6 rounded-lg shadow-lg w-full sm:w-96 z-50 pointer-events-auto">
             <button
               onClick={togglePopup}
@@ -97,7 +97,7 @@ const Page = () => {
 
       {/* ChatBot Popup */}
       {chatBotPopupOpen && (
-        <div className="fixed inset-0 flex justify-end items-end z-40 p-4 end-16  mb-32 lg:p-0">
+        <div className="fixed inset-0 flex justify-end items-end z-40 p-4 lg:end-16  mb-32 lg:p-0">
         <div className="relative bg-orange-600  lg:h-[520px]  rounded-3xl  shadow-lg w-full sm:w-96">
             <h4 className=" text-center text-2xl font-serif font-bold rounded-xl  text-white bg-orange-600 h-14 p-4">Chat with us</h4>
             <button
