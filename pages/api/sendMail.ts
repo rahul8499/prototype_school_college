@@ -38,7 +38,6 @@ export default async function handler(
         pass: process.env.MAILTRAP_PASSWORD,
       },
     } as SMTPTransport.Options);
-    // Email options
     const mailOptions = {
       from: process.env.MAILTRAP_FROM_EMAIL,
       to: "rahulkolhe90.rk.rk@gmail.com",
