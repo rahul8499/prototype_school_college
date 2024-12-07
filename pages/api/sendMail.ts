@@ -41,7 +41,7 @@ export default async function handler(
     // Email options
     const mailOptions = {
       from: process.env.MAILTRAP_FROM_EMAIL,
-      to: email,
+      to: "rahulkolhe90.rk.rk@gmail.com",
       subject: `New Inquiry from ${fullName}`,
       html: emailTemplate(fullName, email, mobile, message),
     };
