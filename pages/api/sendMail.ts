@@ -39,7 +39,7 @@ export default async function handler(
       },
     } as SMTPTransport.Options);
     const mailOptions = {
-      from: process.env.MAILTRAP_FROM_EMAIL,
+      from: process.env.SENDGRID_FROM_EMAIL,
       to: "rahulkolhe90.rk.rk@gmail.com",
       subject: `New Inquiry from ${fullName}`,
       html: emailTemplate(fullName, email, mobile, message),
