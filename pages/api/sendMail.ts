@@ -37,10 +37,12 @@ export default async function handler(
         user: process.env.MAILTRAP_USER,
         pass: process.env.MAILTRAP_PASSWORD,
       },
+      logger: true, // Logs SMTP transactions
+      debug: true,  // Enables SMTP debugging
     } as SMTPTransport.Options);
     // Email options
     const mailOptions = {
-      // from: process.env.MAILTRAP_FROM_EMAIL,
+      from: email, // Sender's name and email address
       to: "rahulkolhe90.rk.rk@gmail.com",
       subject: `New Inquiry from ${fullName}`,
       html: emailTemplate(fullName, email, mobile, message),
