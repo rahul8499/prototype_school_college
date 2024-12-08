@@ -42,7 +42,7 @@ const Page = () => {
 
   return (
     <div className=" relative overflow-hidden ">
- <ToastContainer
+      <ToastContainer
         position="bottom-center"
         autoClose={5000}
         hideProgressBar={false}
@@ -52,11 +52,21 @@ const Page = () => {
         pauseOnFocusLoss
         draggable
         pauseOnHover
-      />      {/* Main Content */}
+      />{" "}
+      {/* Main Content */}
       <Navbar />
       <Header2 />
-      <Header3 />
-      <Home />
+      <div>
+  <div className=" sm:hidden md:hidden lg:block  hidden">
+  <Header3 />
+  </div>
+  <div className="block ">
+  <Home />
+  </div>
+</div>
+
+      {/* <Header3 />
+      <Home /> */}
       <ContactMap />
       <Footer />
       {/* Enquiry Now Button */}
