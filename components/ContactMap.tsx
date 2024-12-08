@@ -56,7 +56,7 @@ const ContactForm = () => {
 
     const sendMail = await response.json();
     if (sendMail.success) {
-      toast.success(sendMail.message);
+      toast.success( `${sendMail.message}. Our team will contact you shortly. Thank you!`);
       reset();
     } else {
       toast.error(sendMail.message);
@@ -115,6 +115,8 @@ const ContactForm = () => {
             <div className="w-full">
               <input
                 type="text"
+                autoComplete="off"
+
                 placeholder="Full Name"
                 className={`w-full p-4 border font-serif ${
                   errors.fullname ? "border-red-500" : "border-gray-300"
@@ -133,6 +135,8 @@ const ContactForm = () => {
               <input
                 type="email"
                 placeholder="Email Address"
+                autoComplete="off"
+
                 className={`w-full p-4 border ${
                   errors.email ? "border-red-500" : "border-gray-300"
                 } rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-500`}
@@ -150,6 +154,8 @@ const ContactForm = () => {
               <input
                 type="tel"
                 placeholder="Mobile/WhatsApp Number"
+                autoComplete="off"
+
                 className={`w-full p-4 border ${
                   errors.mobileNumber ? "border-red-500" : "border-gray-300"
                 } rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-500`}
@@ -166,6 +172,8 @@ const ContactForm = () => {
             <div>
               <textarea
                 placeholder="Message"
+                autoComplete="off"
+
                 className={`w-full p-4 border ${
                   errors.message ? "border-red-500" : "border-gray-300"
                 } rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-500 h-40`}

@@ -2,9 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import topHeadingBackground from "./assets/topheaderbackground.jpg";
-import jadhavarCollgeLogo from "./assets/jadhavarCollgeLogo.png";
-import sudhakarraosirpic from "./assets/sudhakarraosirpic.png";
+
 import Crousel1 from "./assets/Crousel1.jpg";
 import Crousel2 from "./assets/Crousel2.png";
 import bannerPeople from "./assets/bannerPeople1.png";
@@ -13,7 +11,8 @@ import BannerPeople from "./assets/BannerPeople.png";
 import OwnerPic from "./assets/OwnerPic.png";
 import CrouselImage2 from "./assets/CrouselImage2.png";
 
-import awards from "./assets/awards.png";
+import tropy1 from "./assets/tropy1.jpeg";
+
 import medal1 from "./assets/medal1.jpg";
 import Medal from "./assets/Medal.png";
 
@@ -608,7 +607,7 @@ const Home = () => {
               <div className="award-card bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:translate-x-2 hover:scale-105 flex gap-4">
                 <div>
                   <Image
-                    src={awards}
+                    src={tropy1}
                     alt="Best Placement among Educational Institutions"
                     className="h-16 w-16 object-cover"
                     height={64}
@@ -629,7 +628,7 @@ const Home = () => {
               <div className="award-card bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:translate-x-2 hover:scale-105 flex gap-4">
                 <div>
                   <Image
-                    src={awards}
+                    src={tropy1}
                     alt="Outstanding Contribution to Industry-Academia Partnership"
                     className="h-16 w-16 object-cover"
                     height={64}
@@ -648,7 +647,7 @@ const Home = () => {
               <div className="award-card bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:translate-x-2 hover:scale-105 flex gap-4">
                 <div>
                   <Image
-                    src={awards}
+                    src={tropy1}
                     alt="Best Educationist Award"
                     className="h-16 w-16 object-cover"
                     height={64}

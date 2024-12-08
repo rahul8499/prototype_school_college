@@ -10,7 +10,6 @@ const formSchema = z.object({
     .string()
     .nonempty("Mobile Number is required")
     .min(10, "Mobile Number must be at least 10 digits"),
-  // message: z.string().min(1, "Message is required"),
 });
 const ChatBot = () => {
   type FormData = z.infer<typeof formSchema>;
@@ -51,7 +50,9 @@ const ChatBot = () => {
 
     const sendMail = await response.json();
     if (sendMail.success) {
-      toast.success(sendMail.message);
+      toast.success(
+        `${sendMail.message}. Our team will contact you shortly. Thank you!`
+      );
       handleUserSelection("Admission Information");
       reset();
     } else {
@@ -62,9 +63,6 @@ const ChatBot = () => {
   const [step, setStep] = useState(0); // Manage the flow of the chatbot steps
   const [message, setMessage] = useState("");
 
-  // const [message, setMessage] = useState(
-  //   " Hello! I am Jhadhavar College Of Institute Chatbot, Are you looking for information regarding Admission at Jhadhavar College Of Institute or some other information?"
-  // );
   const [isTyping, setIsTyping] = useState(true);
   const [dynamimessage, setDynamicMessage] = useState("");
 
@@ -142,12 +140,11 @@ const ChatBot = () => {
         )}
         {/* Static message (left-aligned) */}
         {message && (
-
-        <div className="flex justify-start mt-4">
-          <div className="p-2 bg-gray-200 rounded-tl-lg rounded-br-lg ">
-            {message}
+          <div className="flex justify-start mt-4">
+            <div className="p-2 bg-gray-200 rounded-tl-lg rounded-br-lg ">
+              {message}
+            </div>
           </div>
-        </div>
         )}
 
         {/* Typing indicator (Chatbot is typing...) */}
@@ -291,82 +288,6 @@ const ChatBot = () => {
               {sendingMail ? "Sending..." : "Submit"}
             </button>
           </form>
-
-          //   <form
-          //   className="font-serif"
-          //   onSubmit={handleSubmit(onSubmit)}
-          // >
-          //   {/* Full Name Input */}
-          //     <input
-          //       type="text"
-          //       placeholder="Full Name"
-          //       autoFocus
-          //       className={`w-full p-2 border font-serif ${
-          //         errors.fullname ? "border-red-500" : "border-gray-300"
-          //       } rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-500`}
-          //       {...register("fullname")}
-          //     />
-          //     {errors.fullname && (
-          //       <p className="text-red-500 text-sm mt-1">
-          //         {errors.fullname.message}
-          //       </p>
-          //     )}
-
-          //   {/* Email Input */}
-          //     <input
-          //       type="email"
-          //       placeholder="Email Address"
-          //       className={`w-full p-2 border ${
-          //         errors.email ? "border-red-500" : "border-gray-300"
-          //       } rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-500`}
-          //       {...register("email")}
-          //     />
-          //     {errors.email && (
-          //       <p className="text-red-500 text-sm mt-1">
-          //         {errors.email.message}
-          //       </p>
-          //     )}
-
-          //   {/* Mobile Number Input */}
-          //     <input
-          //       type="tel"
-          //       placeholder="Mobile/WhatsApp Number"
-          //       className={`w-full p-3 border ${
-          //         errors.mobileNumber ? "border-red-500" : "border-gray-300"
-          //       } rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-500`}
-          //       {...register("mobileNumber")}
-          //     />
-          //     {errors.mobileNumber && (
-          //       <p className="text-red-500 text-sm mt-1">
-          //         {errors.mobileNumber.message}
-          //       </p>
-          //     )}
-
-          //   {/* Message Textarea */}
-          //   <div>
-          //     <textarea
-          //       placeholder="Message"
-          //       className={`w-full p-4 border ${
-          //         errors.message ? "border-red-500" : "border-gray-300"
-          //       } rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-500 h-40`}
-          //       {...register("message")}
-          //     ></textarea>
-          //     {errors.message && (
-          //       <p className="text-red-500 text-sm mt-1">
-          //         {errors.message.message}
-          //       </p>
-          //     )}
-          //   </div>
-
-          //   {/* Submit Button */}
-          //   <button
-          //     type="submit"
-          //     disabled={sendingMail}
-          //     className="w-full py-3 bg-orange-600 text-white font-semibold rounded-lg hover:bg-orange-700 transition duration-300 disabled:bg-gray-400"
-          //   >
-          //     {sendingMail ? "Sending..." : "Submit"}
-          //   </button>
-          // </form>
         )}
       </div>
     </div>

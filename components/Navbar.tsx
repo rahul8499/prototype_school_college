@@ -11,7 +11,8 @@ const Navbar: React.FC<NavbarProps> = ({ className }) => {
   const [openSubmenu, setOpenSubmenu] = useState(null);
 
   const handleSubmenuToggle = (index: any) => {
-    setOpenSubmenu(openSubmenu === index ? null : index);
+    setOpenSubmenu((prevIndex) => (prevIndex === index ? null : index));
+
   };
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const menuItems = [
@@ -19,129 +20,105 @@ const Navbar: React.FC<NavbarProps> = ({ className }) => {
       icon: Store,
       label: "ABOUT US",
       submenu: [
-        { label: "Our History", link: "" },
-        { label: "Mission & Vision", link: "" },
+        { label: "Adminstrator", link: "" },
+        { label: "Principle Desk", link: "/" },
       ],
     },
     {
       icon: GraduationCap,
       label: "ADMISSION",
       submenu: [
-        { label: "Apply Now", link: "" },
-        { label: "Requirements", link: "" },
+        { label: "Graduation", link: "" },
+        { label: "Post Graduation", link: "" },
       ],
     },
     {
-      icon: ArrowDownToLine,
+      icon:ArrowDownToLine,
       label: "PROSPECT & PAMPLET",
-      submenu: [
-        { label: "Brochure 2023", link: "" },
-        { label: "Brochure 2024", link: "" },
-      ],
+
     },
     {
       icon: School,
       label: "ACADEMIC",
       submenu: [
-        { label: "Courses Offered", link: "" },
-        { label: "Academic Calendar", link: "" },
+        { label: "Graduation", link: "" },
+        { label: "Post Graduation", link: "" },
       ],
     },
     {
       icon: ArrowDownToLine,
       label: "UDAN & RULES",
       submenu: [
-        { label: "Apply Now", link: "" },
-        { label: "Rules & Policies", link: "/" },
+        { label: "Udan1", link: "" },
+        { label: "Udan2", link: "" },
       ],
     },
     {
       icon: BookOpenCheck,
       label: "EXAMINATION CENTER",
       submenu: [
-        { label: "Exam Schedule", link: "" },
-        { label: "Guidelines", link: "" },
+        { label: "Label1", link: "" },
+        { label: "Label2", link: "" },
       ],
     },
     {
       icon: HandHelping,
       label: "STUDENT'S SUPPORT",
       submenu: [
-        { label: "Counseling Services", link: "" },
-        { label: "Financial Aid", link: "" },
+        { label: "Label1", link: "" },
+        { label: "Label2", link: "" },
       ],
     },
     {
-      icon: ShieldCheck,
+      icon: GraduationCap,
       label: "IQAC",
-      submenu: [
-        { label: "Quality Assurance", link: "" },
-        { label: "Reports", link: "" },
-      ],
+
     },
     {
       icon: Handshake,
       label: "ALUMNI",
-      submenu: [
-        { label: "Alumni Network", link: "/" },
-        { label: "Events", link: "" },
-      ],
+
     },
     {
       icon: Images,
       label: "GALLERY",
-      submenu: [
-        { label: "Photo Gallery", link: "" },
-        { label: "Video Gallery", link: "" },
-      ],
+
     },
     {
       icon: Youtube,
       label: "YOUTUBE",
-      submenu: [
-        { label: "Our Channel", link: "/" },
-        { label: "Featured Videos", link: "" },
-      ],
+
     },
     {
       icon: Newspaper,
       label: "NEWS & MEDIA",
       submenu: [
-        { label: "Press Releases", link: "/" },
-        { label: "Media Coverage", link: "" },
+        { label: "Label1", link: "" },
+        { label: "Label2", link: "" },
       ],
     },
     {
       icon: Users,
       label: "FACULTY",
       submenu: [
-        { label: "Meet the Team", link: "/" },
-        { label: "Join Us", link: "" },
+        { label: "Label1", link: "" },
+        { label: "Label2", link: "" },
       ],
     },
     {
       icon: ChartNoAxesCombined,
       label: "NAAC",
-      submenu: [
-        { label: "Accreditation", link: "" },
-        { label: "Reports", link: "" },
-      ],
+
     },
     {
       icon: SquareUserRound,
       label: "CONTACT US",
-      submenu: [
-        { label: "Contact Form", link: "" },
-        { label: "Our Location", link: "" },
-      ],
+
     },
     {
       icon: MessageSquareReply,
       label: "FEEDBACKS",
-      submenu: [
-        { label: "Submit Feedback", link: "" },
-        { label: "View Feedback", link: "" },
-      ],
+
     },
   ];
   const [isPopupOpen, setPopupOpen] = useState(false);
@@ -171,35 +148,7 @@ const Navbar: React.FC<NavbarProps> = ({ className }) => {
       >
         <Menu size={42} />
       </button>
-      {/* <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          <div className="flex items-center">
-            <div className="flex-shrink-0 text-xl font-bold">
-              <Link href="/">MyApp</Link>
-            </div>
-            <div className="ml-10 flex space-x-4">
-              <Link
-                href="/batchList"
-                className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-              >
-                Batch
-              </Link>
-              <Link
-                href="/appointment-list"
-                className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-              >
-               Faculties
-              </Link>
-              <Link
-                href="/log-history"
-                className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-              >
-                Log History
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div> */}
+
         <div
         className="bg-cover bg-center top  bg-orange-600 "
 
@@ -224,7 +173,7 @@ const Navbar: React.FC<NavbarProps> = ({ className }) => {
             <a href="https://wa.me/8888878858" target="_blank" rel="noopener noreferrer">
       <div className="flex items-center">
         <Phone className="h-5 w-6 text-white" /> {/* Phone icon */}
-        <span className="text-white ml-2">+18888878858</span> {/* Phone number */}
+        <span className="text-white ml-2 font-serif">+18888878858</span> {/* Phone number */}
       </div>
     </a>
 
@@ -241,7 +190,7 @@ const Navbar: React.FC<NavbarProps> = ({ className }) => {
               <div className= " font-serif flex items-center justify-cebg-blacknter h-6 w-6 text-white rounded-full ">
                 <User className="h-4 w-4 text-white" /> {/* Icon with black background */}
               </div>
-              <span className="text-sm">CAREERS</span>
+              <span className="text-sm font-serif">CAREERS</span>
             </a>
 
             {/* Vertical Separator */}
@@ -255,7 +204,7 @@ const Navbar: React.FC<NavbarProps> = ({ className }) => {
               <div className="font-serif flex items-center justify-center h-6 w-6 text-white rounded-full ">
                 <CircleHelp className="h-4 w-4 text-white" /> {/* Icon with black background */}
               </div>
-              <span className="text-sm"                         onClick={togglePopup}
+              <span className="text-sm font-serif"                         onClick={togglePopup}
               >ENQUIRY NOW</span>
             </a>
           </div>
@@ -285,38 +234,43 @@ const Navbar: React.FC<NavbarProps> = ({ className }) => {
             <div className="flex-1 overflow-y-scroll">
 
             {menuItems.map((item, index) => (
-              <div key={index} className="mb-5 ml-2 mr-2">
-                {/* Main Menu Item */}
-                <div
-                  className="flex justify-between items-center cursor-pointer"
-                  onClick={() => handleSubmenuToggle(index)}
-                >
-                  <div className="flex items-center space-x-2">
-                    <item.icon className="h-6 w-6 text-gray-700" />
-                    <span className="text-gray-800 font-semibold font-serif">{item.label}</span>
-                  </div>
-                  {/* Toggle Icon */}
-                  <span className="text-gray-600">
-                    {openSubmenu === index ? "▲" : "▼"}
-                  </span>
-                </div>
+        <div key={index} className="mb-5 ml-2 mr-2">
+          {/* Main Menu Item */}
+          <div
+            className="flex justify-between items-center cursor-pointer"
+            onClick={() => item.submenu && handleSubmenuToggle(index)} // Only toggle if submenu exists
+          >
+            <div className="flex items-center space-x-2">
+              <item.icon className="h-6 w-6 text-gray-700" />
+              <span className="text-gray-800 font-semibold font-serif">
+                {item.label}
+              </span>
+            </div>
+            {/* Toggle Icon */}
+            {item.submenu && (
+              <span className="text-gray-600">
+                {openSubmenu === index ? "▲" : "▼"}
+              </span>
+            )}
+          </div>
 
-                {/* Submenu */}
-                {openSubmenu === index && (
-                  <div className="ml-6 mt-2 ">
-                    {item.submenu.map((sub, subIndex) => (
-                      <a
-                        key={subIndex}
-                        href={sub.link}
-                        className="block font-serif text-gray-600 text-sm py-1 hover:underline"
-                      >
-                        {sub.label}
-                      </a>
-                    ))}
-                  </div>
-                )}
-              </div>
-            ))}
+          {/* Submenu */}
+          {item.submenu && openSubmenu === index && (
+            <div className="ml-6 mt-2">
+              {item.submenu.map((sub, subIndex) => (
+                <a
+                  key={subIndex}
+                  href={sub.link}
+                  className="block font-serif text-gray-600 text-sm py-1 hover:underline"
+                >
+                  {sub.label}
+                </a>
+              ))}
+            </div>
+          )}
+        </div>
+      ))}
+
             </div>
           </div>
         </div>

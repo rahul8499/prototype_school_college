@@ -1,41 +1,28 @@
-import React from 'react'
-
-
+import React from "react";
 
 import {
   ArrowDownToLine,
   BookOpenCheck,
   ChartNoAxesCombined,
-  CircleHelp,
   GraduationCap,
   HandHelping,
   Handshake,
   Images,
-  Mail,
   MessageSquareReply,
   Newspaper,
-  Phone,
   School,
-  ShieldCheck,
   SquareUserRound,
   Store,
-  User,
   Users,
   Youtube,
-  Menu,
-  Send,
-  Trophy,
-  ClipboardList,
-  Calendar,
 } from "lucide-react";
 type Header3Props = {
   className?: string;
 };
-  const Header3: React.FC<Header3Props> = ({ className }) => {
-
+const Header3: React.FC<Header3Props> = ({ className }) => {
   return (
     <div>
-    <div className="font-serif text-stone-700">
+      <div className="font-serif text-stone-700">
         <div className="mx-auto text-center max-w-full px-4 rounded-md">
           {/* Top Border */}
           <hr className="border-t lg:flex hidden border-gray-400 mb-4" />
@@ -62,7 +49,6 @@ type Header3Props = {
               {
                 icon: ArrowDownToLine,
                 label: "PROSPECT & PAMPLET",
-
               },
               {
                 icon: School,
@@ -87,7 +73,6 @@ type Header3Props = {
                   { label: "Label1", link: "" },
                   { label: "Label2", link: "" },
                 ],
-
               },
               {
                 icon: HandHelping,
@@ -96,27 +81,22 @@ type Header3Props = {
                   { label: "Label1", link: "" },
                   { label: "Label2", link: "" },
                 ],
-
               },
               {
                 icon: GraduationCap,
                 label: "IQAC",
-
               },
               {
                 icon: Handshake,
                 label: "ALUMNI",
-
               },
               {
                 icon: Images,
                 label: "GALLERY",
-
               },
               {
                 icon: Youtube,
                 label: "Youtube",
-
               },
               {
                 icon: Newspaper,
@@ -134,22 +114,18 @@ type Header3Props = {
                   { label: "Label1", link: "" },
                   { label: "Label2", link: "" },
                 ],
-
               },
               {
                 icon: ChartNoAxesCombined,
                 label: "NAAC",
-
               },
               {
                 icon: SquareUserRound,
                 label: "CONTACT",
-
               },
               {
                 icon: MessageSquareReply,
                 label: "FEEDBACKS",
-
               },
               // Add more menu items here
             ].map((item, index) => (
@@ -188,7 +164,7 @@ type Header3Props = {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Header3
+export default Header3;

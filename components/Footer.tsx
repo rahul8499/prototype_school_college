@@ -31,7 +31,7 @@ const Footer = () => {
           </div>
           <div>
             <h3 className="text-lg font-semibold text-white mb-4 font-serif">Examination</h3>
-            <ul className="space-y-2">
+            <ul className="space-y-2 font-serif">
               <li>
                 <a href="#" className="hover:text-gray-400">Examination Centre</a>
               </li>
@@ -42,12 +42,12 @@ const Footer = () => {
           </div>
           <div>
             <h3 className="text-lg font-semibold text-white mb-4 font-serif">Explore</h3>
-            <ul className="space-y-2">
+            <ul className="space-y-2 font-serif">
               <li>
-                <a href="#" className="hover:text-gray-400">Gallery</a>
+                <a href="#" className="hover:text-gray-40 font-serif0">Gallery</a>
               </li>
               <li>
-                <a href="#" className="hover:text-gray-400">Faculty</a>
+                <a href="#" className="hover:text-gray-400 font-serif">Faculty</a>
               </li>
             </ul>
           </div>
@@ -55,7 +55,7 @@ const Footer = () => {
             <h3 className="text-lg font-semibold text-white mb-4 font-serif">Contact</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="hover:text-gray-400">Contact Us</a>
+                <a href="#" className="hover:text-gray-400 font-serif">Contact Us</a>
               </li>
             </ul>
           </div>
