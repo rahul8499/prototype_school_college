@@ -72,7 +72,7 @@ const ContactForm = () => {
         </div>
 
         <form
-          className="lg:space-y-6 space-y-2 font-serif"
+          className="lg:space-y-2 space-y-2 font-serif"
           onSubmit={handleSubmit(onSubmit)}
         >
           {/* Full Name Input */}

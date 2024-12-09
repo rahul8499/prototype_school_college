@@ -73,7 +73,7 @@ const Page = () => {
       <div className="fixed top-3/4 right-10 z-20">
         <button
           onClick={togglePopup}
-          className="bg-orange-600 flex font-bold text-white py-2 px-4 rounded shadow-lg hover:bg-orange-500 focus:outline-none transform rotate-90 origin-bottom-right"
+          className="bg-orange-600  cursor-pointer flex font-bold text-white py-2 px-4 rounded shadow-lg hover:bg-orange-500 focus:outline-none transform rotate-90 origin-bottom-right"
         >
           <CircleHelp /> <p className="ml-2 font-serif"> ENQUIRE NOW</p>
         </button>

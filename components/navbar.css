@@ -1,0 +1,14 @@
+/* Ensure items wrap properly for screen widths between 1022px and 966px */
+@media (max-width: 1022px) and (min-width: 966px) {
+  .menu-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping */
+    justify-content: space-between; /* Distribute items evenly */
+    gap: 8px; /* Add spacing between items */
+  }
+  .menu-item {
+    flex: 0 1 calc(6.25% - 8px); /* Adjust for 16 items (100% / 16) with spacing */
+    min-width: 60px; /* Prevent items from shrinking too much */
+    text-align: center;
+  }
+}

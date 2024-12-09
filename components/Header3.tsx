@@ -1,5 +1,5 @@
 import React from "react";
-
+import './navbar.css'
 import {
   ArrowDownToLine,
   BookOpenCheck,
@@ -21,18 +21,18 @@ type Header3Props = {
 };
 const Header3: React.FC<Header3Props> = ({ className }) => {
   return (
-    <div>
+    <div className="between-md-lg">
       <div className="font-serif text-stone-700">
         <div className="mx-auto text-center max-w-full px-4 rounded-md">
           {/* Top Border */}
           <hr className="border-t lg:flex hidden border-gray-400 mb-4" />
 
           {/* Menu Items with Hover Effect */}
-          <div className="lg:flex hidden justify-between flex-wrap">
+          <div className="lg:flex hidden justify-evenly flex-wrap">
             {[
               {
                 icon: Store,
-                label: "ABOUT US",
+                label: "ABOUT",
                 submenu: [
                   { label: "Adminstrator", link: "" },
                   { label: "Principle Desk", link: "/" },
@@ -48,7 +48,7 @@ const Header3: React.FC<Header3Props> = ({ className }) => {
               },
               {
                 icon: ArrowDownToLine,
-                label: "PROSPECT & PAMPLET",
+                label: " PAMPLET",
               },
               {
                 icon: School,
@@ -60,7 +60,7 @@ const Header3: React.FC<Header3Props> = ({ className }) => {
               },
               {
                 icon: ArrowDownToLine,
-                label: "UDAN & RULES",
+                label: "UDAN ",
                 submenu: [
                   { label: "Udan1", link: "" },
                   { label: "Udan2", link: "" },
@@ -68,7 +68,7 @@ const Header3: React.FC<Header3Props> = ({ className }) => {
               },
               {
                 icon: BookOpenCheck,
-                label: "EXAMINATION CENTER",
+                label: "EXAM DESK",
                 submenu: [
                   { label: "Label1", link: "" },
                   { label: "Label2", link: "" },
@@ -96,11 +96,11 @@ const Header3: React.FC<Header3Props> = ({ className }) => {
               },
               {
                 icon: Youtube,
-                label: "Youtube",
+                label: "YOUTUBE",
               },
               {
                 icon: Newspaper,
-                label: "NEWS & MEDIA",
+                label: "MEDIA",
                 submenu: [
                   { label: "Label1", link: "" },
                   { label: "Label2", link: "" },
@@ -135,7 +135,7 @@ const Header3: React.FC<Header3Props> = ({ className }) => {
               >
                 {/* Main Menu Item */}
                 {/* <item.icon className="h-8 w-8 text-gray-700 mb-2 group-hover:text-orange-500 transition-colors duration-300" /> */}
-                <span className="text-sm font-medium text-gray-800 group-hover:text-orange-500 transition-colors duration-300">
+                <span className="text-sm  font-medium text-gray-800 group-hover:text-orange-500 transition-colors duration-300">
                   {item.label}
                 </span>
 
