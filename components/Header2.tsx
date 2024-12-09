@@ -81,7 +81,7 @@ const Header2: React.FC<Header2Props> = ({ className }) => {
         </div>
       </div>
       {isPopupOpen && (
-        <div className="fixed inset-0 bg-gray-500 bg-opacity-50 flex justify-center items-center z-40">
+        <div className="fixed inset-0 bg-gray-500 bg-opacity-50 flex justify-center m-4 items-center z-40">
           <div className="relative bg-white p-6 rounded-lg shadow-lg w-full sm:w-96">
             <button
               onClick={togglePopup}

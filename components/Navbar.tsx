@@ -160,7 +160,7 @@ const Navbar: React.FC<NavbarProps> = ({ className }) => {
           <div className="flex flex-row md:flex-row items-center  space-x-2 md:space-y-0 md:space-x-2"    >
 
           <a
-      href="https://mail.google.com/mail/?view=cm&fs=1&to=admission@ac.in"
+      href="mailto:admission@ac.in"
       className="font-serif text-sm text-white font-semibold flex items-center space-x-1"
       target="_blank" // Open link in new tab
       rel="noopener noreferrer" // Recommended for security reasons when using target="_blank"
@@ -170,10 +170,10 @@ const Navbar: React.FC<NavbarProps> = ({ className }) => {
     </a>
             <span className="border-l border-white h-6  md:inline-block"></span> {/* Vertical line */}
 
-            <a href="https://wa.me/8888878858" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/918888878858" target="_blank" rel="noopener noreferrer">
       <div className="flex items-center">
         <Phone className="h-5 w-6 text-white" /> {/* Phone icon */}
-        <span className="text-white ml-2 font-serif">+18888878858</span> {/* Phone number */}
+        <span className="text-white ml-2 font-serif">+91 8888878858</span> {/* Phone number */}
       </div>
     </a>
 
